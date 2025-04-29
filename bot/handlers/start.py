@@ -8,7 +8,8 @@ def register(bot):
             "/lineup - Ver o elenco atual da FURIA 🐱‍👤\n"
             "/titulos - Conhecer os títulos conquistados 🏆\n"
             "/proximosjogos - Saber dos próximos jogos 📅\n"
-            "/loja - Acessar a loja oficial da FURIA 🛒\n\n"
+            "/loja - Acessar a loja oficial da FURIA 🛒\n"
+            "/batepapo - Bater um papo sobre times, CS2, jogadores 💬\n\n"
             "É só clicar no comando que quiser! 😎"
         )
         bot.send_message(message.chat.id, texto, parse_mode="Markdown")
