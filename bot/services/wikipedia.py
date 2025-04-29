@@ -31,7 +31,11 @@ def get_titulos():
     tabelas = pd.read_html('https://pt.wikipedia.org/wiki/Furia_Esports#Elenco_atual')
     tabela_titulos = tabelas[1]
 
-    # Converte a tabela pra Markdown
-    markdown_table = tabela_titulos.to_markdown(index=False)
+    titulos_formatados = "🏆 *Títulos conquistados pela FURIA (CS:GO/CS2):*\n\n"
+    for _, row in tabela_titulos.iterrows():
+        ano = row.get("Ano", "")
+        campeonato = row.get("Campeonato", "")
+        posição = row.get("Posição", "")
+        titulos_formatados += f"🔹 *{ano}* — {campeonato} ({posição})\n"
 
-    return markdown_table
+    return titulos_formatados
