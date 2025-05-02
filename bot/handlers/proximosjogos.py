@@ -1,4 +1,4 @@
-from bot.services.agenda import get_proximos_jogos
+from bot.services.hltv import get_proximos_jogos
 
 def register(bot):
     @bot.message_handler(commands=['proximosjogos'])
