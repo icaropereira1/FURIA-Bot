@@ -1,96 +1,101 @@
 
 # 🐱‍👤 FURIA ChatBot
 
-Um chatbot desenvolvido como parte do processo seletivo de estágio na equipe de desenvolvimento de software da FURIA Esports. O objetivo é criar uma aplicação capaz de interagir com usuários, responder dúvidas frequentes e representar o estilo e identidade da FURIA de forma única e funcional.
+Um chatbot desenvolvido como parte do processo seletivo de estágio na equipe de desenvolvimento de software da FURIA Esports. O objetivo é criar uma aplicação interativa que responda perguntas sobre a organização e represente a identidade da FURIA de forma única, informativa e funcional.
 
 ---
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **Python** - Linguagem principal do projeto
-- **pyTelegramBotAPI** — Biblioteca que integra com o Telegram
-- **pandas** — Leitura de tabelas HTML (Wikipedia)
-- **beautifulsoup4** —  Web scraping para pegar dados de sites como o HLTV
+- **Python** — Linguagem principal do projeto  
+- **pyTelegramBotAPI** — Biblioteca para integração com a API do Telegram  
+- **pandas** — Utilizado para leitura de tabelas HTML (Wikipedia)  
+- **beautifulsoup4** — Web scraping (HLTV e outros)  
+- **python-dotenv** - Utilizado para leitura e segurança das keys da API do Telegram  
 
 ---
 
 ## 🧠 Funcionalidades
 
-- Comando /start - Boas vindas e introdução ao FURIA Bot 
-- Comando /loja - Informa dos produtos da loja da FURIA 
-- Comando /proximosjogos - Mostra os próximos jogos da FURIA CS2 
-- Comando /lineup - Mostra a lineup atual da FURIA CS2
-- Comando /titulos - Mostra os títulos conquistados pela FURIA CS2
- 
+- `/start` — Boas-vindas e introdução ao FURIA Bot  
+- `/loja` — Mostra os produtos disponíveis na loja oficial da FURIA  
+- `/proximosjogos` — Exibe os próximos jogos do time CS2 da FURIA  
+- `/lineup` — Mostra os jogadores e comissão técnica da equipe  
+- `/titulos` — Lista os títulos conquistados pela FURIA no CS2  
+- `/ativarnotificacao` — Ativa notificações automáticas sobre novos jogos  
+- `/desativarnotificacao` — Cancela as notificações de novos jogos  
+
 ---
 
 ## 🚀 Como Rodar o Projeto
 
-### 1. Clonar repositório do Github
+### 1. Clonar o repositório
 
+```bash
 git clone https://github.com/icaropereira1/FURIA-Bot
-cd furia-chatbot
+cd FURIA-Bot
+```
 
+### 2. Configurar variáveis sensíveis
 
-### 2. 
+No arquivo `.env` coloque sua key da API do Telegram Bot.
 
+### 3. Instalar dependências
 
-
-### 3. Instalar depêndencias
-
+```bash
 pip install -r requirements.txt
- 
-
-
+```
 
 ### 4. Executar o bot
 
-python3 -m bot.main
+```bash
+python -m bot.main
+```
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```
-FURIA-bot/
+FURIA-Bot/
 ├── bot/
-│   ├── handlers/        # Comandos do bot (/start, /loja, /lineup, etc.)
-│   ├── services/        # Funções auxiliares (bandeiras, scraping, wikipedia)
-│   ├── __init__.py      
-│   └── main.py          # Código principal do bot
-├── requirements.txt     # Dependências do projeto
+│   ├── handlers/        # Comandos do bot (/start, /loja, etc.)
+│   ├── services/        # Funções auxiliares (scraping, notificações)
+│   ├── main.py          # Código principal do bot
+│   └── __init__.py
+├── requirements.txt     # Dependências
 └── README.md            # Documentação
-
 ```
 
 ---
 
 ## 🛠️ Exemplo de Uso
 
-**Usuário**: 
-
-**Bot**: 
+**Usuário**: /proximosjogos  
+**Bot**: 🎮 Próximos Jogos da FURIA (CS2):  
+- 01/05/2025 - FURIA vs Time Fake (Torneio Teste)
 
 ---
 
 ## 📌 Próximos Passos
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Adicionar histórico de mensagens no modo bate-papo  
+- [ ] Criar painel administrativo web para gerenciar notificações  
+- [ ] Expandir para outras modalidades (Valorant, R6)  
+- [ ] Suporte a múltiplos idiomas  
 
 ---
 
 ## ✒️ Autor
 
 Desenvolvido por Ícaro Pereira Alves — estudante de Engenharia de Computação na UFG  
-Contato: xicaroestudos@gmail.com  
-GitHub: [@icaropereira1](https://github.com/icaropereira1)
+📧 Email: xicaroestudos@gmail.com  
+🐙 GitHub: [@icaropereira1](https://github.com/icaropereira1)
 
 ---
 
 ## 🖤 FURIA
 
-> "Somos uma família. Somos FURIA."  
-Esse projeto é uma homenagem à dedicação, inovação e paixão que a FURIA representa no cenário de esports.
+> "Somos uma família. Somos FURIA."
+
+Este projeto é uma homenagem à dedicação, inovação e paixão que a FURIA representa no cenário dos esports.
