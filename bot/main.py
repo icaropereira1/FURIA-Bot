@@ -1,8 +1,15 @@
+import os
 import telebot
+from dotenv import load_dotenv
 
-bot = telebot.TeleBot('8160505498:AAEwwFnFz-UlNYlmKhU_rX7_Zzoyz03iHH4')
+load_dotenv()
 
-from bot.handlers import start, loja, lineup, proximosjogos, titulos, batepapo
+bot = telebot.TeleBot(os.getenv('telegrambot_key'))
+
+from bot.handlers import start, loja, lineup, proximosjogos, titulos, batepapo, ativar_des_notificações
+from bot.services.monitoramento import iniciar_monitoramento
+
+iniciar_monitoramento(bot)
 
 # Registra handlers
 start.register(bot)
@@ -10,7 +17,7 @@ loja.register(bot)
 lineup.register(bot)
 proximosjogos.register(bot)
 titulos.register(bot)
-batepapo.register(bot)
+ativar_des_notificações.register(bot)
 
 print("Bot iniciado...")
 bot.polling()
