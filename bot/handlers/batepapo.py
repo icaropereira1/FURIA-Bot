@@ -1,26 +1,48 @@
-import telebot
-from telebot import types
-from bot.services.modobatepapo import get_resposta_ia
+#import random
+#from telebot import types
 
-# Guarda quem está no modo de bate-papo
+#def register(bot):
+#    respostas_torcida = [
+#        "FURIA CARALHO! 🔥", 
+#        "VAMO DE PANTERA! 🐍",
+#        "AQUI É FURIA PORRA! 💣",
+#        "TACA O PAU NELES! 🔫"
+#    ]
 
-usuarios_ativos = set()
+    # Comando /batepapo
+#    @bot.message_handler(commands=['batepapo'])
+#    def handle_batepapo(message):
+#        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+#        markup.add("Quem é o capitão?", "Próximo jogo", "Sair")
+#        bot.send_message(
+#            message.chat.id,
+#            "🤖 Modo bate-papo ativado! Pergunte sobre:\n- Jogadores\n- Próximos jogos\n- Títulos\nOu grite FURIA!",
+#            reply_markup=markup
+#        )
 
-def register(bot):
-    @bot.message_handler(commands=['batepapo'])
-    def handle_batepapo(message):
-        usuarios_ativos.add(message.chat.id)
-        bot.reply_to(message, "🤖 Modo bate-papo ativado! Me pergunte algo sobre a FURIA ou CS2.")
+    # Respostas automáticas para torcida
+#    @bot.message_handler(func=lambda m: any(kw in m.text.lower() for kw in ["furia", "vamo", "porra"]))
+#    def handle_torcida(message):
+#        bot.reply_to(message, random.choice(respostas_torcida))
 
-    @bot.message_handler(commands=['sair'])
-    def handle_sair(message):
-        if message.chat.id in usuarios_ativos:
-            usuarios_ativos.remove(message.chat.id)
-            bot.reply_to(message, "🚪 Modo bate-papo desativado. Use /batepapo para ativar novamente.")
-        else:
-            bot.reply_to(message, "Você não está no modo bate-papo.")
+    # Respostas para perguntas específicas
+#    @bot.message_handler(func=lambda m: True)
+#    def handle_mensagem(message):
+#        resposta = gerar_resposta(message.text)
+#        bot.reply_to(message, resposta)
 
-    @bot.message_handler(func=lambda message: message.chat.id in usuarios_ativos)
-    def handle_mensagem_ia(message):
-        resposta = get_resposta_ia(message.text)
-        bot.reply_to(message, resposta)
+#def gerar_resposta(pergunta):
+##    pergunta = pergunta.lower()
+#    faq = {
+#        "quem é o capitão": "O capitão é Fallen (Gabriel Toledo)! 🎮🐍",
+##       "títulos": "Veja a lista com /titulos! 🏆"
+ #   }
+    
+#   for key in faq:
+#        if key in pergunta:
+#            return faq[key]
+    
+#    return random.choice([
+#        "Não entendi, mas VAMO FURIA! 🔥",
+#        "Pergunte sobre jogadores ou use /help"
+#    ])
