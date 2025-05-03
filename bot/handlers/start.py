@@ -8,10 +8,11 @@ def register(bot):
             "/lineup - Ver o elenco atual da FURIA 🐱‍👤\n"
             "/titulos - Conhecer os títulos conquistados 🏆\n"
             "/proximosjogos - Saber dos próximos jogos 📅\n"
+            "/resultados - Ver os resultados dos últimos jogos da Pantera 🥇 \n"
             "/loja - Acessar a loja oficial da FURIA 🛒\n"
             "/batepapo - Bater um papo sobre times, CS2, jogadores 💬\n"
-            "/ativarnotificacao - Ative as notificações e fique sabendo quando a FURIOSA estiver jogando CS2!\n"
-            "/desativarnotificacao - Desative as notificações dos jogos de CS2 da FURIA\n\n"
+            "/ativarnotificacao - Ative as notificações e fique sabendo quando a FURIOSA estiver jogando CS2!🔔\n"
+            "/desativarnotificacao - Desative as notificações dos jogos de CS2 da FURIA🔕\n\n"
             "É só clicar no comando que quiser! 😎"
         )
         bot.send_message(message.chat.id, texto, parse_mode="Markdown")
