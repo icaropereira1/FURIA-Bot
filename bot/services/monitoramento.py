@@ -1,6 +1,6 @@
 import time
 import threading
-from bot.services.hltv import get_proximos_jogos
+from bot.services.pandascore import get_proximos_jogos
 from datetime import datetime, timedelta
 from bot.services.notificacoes import obter_chats_notificacao
 
@@ -36,10 +36,12 @@ def iniciar_monitoramento(bot):
                             except Exception as e:
                                 print(f"[Erro ao notificar {chat_id_salvo}]: {e}")
 
-                time.sleep(10)  # Verifica a cada hora
+                time.sleep(3600)  # Verifica a cada hora
 
             except Exception as e:
                 print(f"[Monitoramento] Erro: {e}")
-                time.sleep(10)
+                time.sleep(3600)
 
     threading.Thread(target=monitorar, daemon=True).start()
+
+    
