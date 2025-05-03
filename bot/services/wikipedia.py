@@ -26,7 +26,6 @@ def get_lineup():
 
     return jogadores, coachs
 
-
 def get_titulos():
     tabelas = pd.read_html('https://pt.wikipedia.org/wiki/Furia_Esports#Elenco_atual')
     tabela_titulos = tabelas[1]
