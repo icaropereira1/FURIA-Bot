@@ -1,5 +1,5 @@
 from bot.core.bot_instance import bot
-from bot.handlers import start, loja, lineup, proximosjogos, titulos, batepapo, ativar_des_notificações, resultados
+from bot.handlers import ativar_desativar_notificações, start, loja, lineup, proximosjogos, titulos, batepapo, resultados
 from bot.services.monitoramento import iniciar_monitoramento
 
 iniciar_monitoramento(bot)
@@ -10,7 +10,7 @@ loja.register(bot)
 lineup.register(bot)
 proximosjogos.register(bot)
 titulos.register(bot)
-ativar_des_notificações.register(bot)
+ativar_desativar_notificações.register(bot)
 resultados.register(bot)
 
 print("Bot iniciado...")
