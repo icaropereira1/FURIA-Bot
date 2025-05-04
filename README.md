@@ -20,6 +20,7 @@ Um chatbot desenvolvido como parte do processo seletivo de estágio na equipe de
 - `/start` — Boas-vindas e introdução ao FURIA Bot  
 - `/loja` — Mostra os produtos disponíveis na loja oficial da FURIA  
 - `/proximosjogos` — Exibe os próximos jogos do time CS2 da FURIA  
+- `/resultados` — Exibe os resultados dos últimos 5 jogos da FURIA no CS2
 - `/lineup` — Mostra os jogadores e comissão técnica da equipe  
 - `/titulos` — Lista os títulos conquistados pela FURIA no CS2  
 - `/ativarnotificacao` — Ativa notificações automáticas sobre novos jogos  
@@ -38,7 +39,7 @@ cd FURIA-Bot
 
 ### 2. Configurar variáveis sensíveis
 
-No arquivo `.env` coloque sua key da API do Telegram Bot.
+No arquivo `.env` coloque sua key da API do Telegram Bot e do PandaScore
 
 ### 3. Instalar dependências
 
@@ -59,8 +60,9 @@ python -m bot.main
 ```
 FURIA-Bot/
 ├── bot/
+│   ├── core             # Importa configurações para funcionar framework
 │   ├── handlers/        # Comandos do bot (/start, /loja, etc.)
-│   ├── services/        # Funções auxiliares (scraping, notificações)
+│   ├── services/        # Funções auxiliares (pandascore, notificações)
 │   ├── main.py          # Código principal do bot
 │   └── __init__.py
 ├── requirements.txt     # Dependências
@@ -72,8 +74,12 @@ FURIA-Bot/
 ## 🛠️ Exemplo de Uso
 
 **Usuário**: /proximosjogos  
-**Bot**: 🎮 Próximos Jogos da FURIA (CS2):  
-- 01/05/2025 - FURIA vs Time Fake (Torneio Teste)
+**Bot**: 🔥Próximos jogos da FURIA:🔥
+
+🏆 Campeonato: Astana 2025
+🆚 TheMongolz
+📅 10/05/2025 às 05:00
+🔴 Assistir ao vivo (https://www.twitch.tv/PGL)
 
 ---
 
@@ -81,7 +87,7 @@ FURIA-Bot/
 
 - [ ] Adicionar histórico de mensagens no modo bate-papo  
 - [ ] Criar painel administrativo web para gerenciar notificações  
-- [ ] Expandir para outras modalidades (Valorant, R6)  
+- [ ] Expandir para outras modalidades (Valorant, R6, Rocket League)  
 - [ ] Suporte a múltiplos idiomas  
 
 ---
