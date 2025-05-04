@@ -7,7 +7,7 @@ def register(bot):
         chat_id = message.chat.id
         user_first_name = message.from_user.first_name or "Torcedor"
 
-        jogadores = ["KSCERATO", "yuurih", "arT", "chelo", "fallen"]
+        jogadores = ["KSCERATO", "yuurih", "molodoy", "YEKINDAR", "fallen"]
         emojis = ["🔥", "💥", "🐆", "🎯", "🏆", "📢", "🎉", "💣", "🚀"]
 
         gritos_normais = [
