@@ -12,6 +12,7 @@ Um chatbot desenvolvido como parte do processo seletivo de estágio na equipe de
 - **pandas** — Utilizado para leitura de tabelas HTML (Wikipedia)  
 - **beautifulsoup4** — Web scraping (HLTV e outros)  
 - **python-dotenv** - Utilizado para leitura e segurança das keys da API do Telegram  
+- **pytz** - Utilizado para arrumar datas e horários
 
 ---
 
@@ -21,10 +22,12 @@ Um chatbot desenvolvido como parte do processo seletivo de estágio na equipe de
 - `/loja` — Mostra os produtos disponíveis na loja oficial da FURIA  
 - `/proximosjogos` — Exibe os próximos jogos do time CS2 da FURIA  
 - `/resultados` — Exibe os resultados dos últimos 5 jogos da FURIA no CS2
+- `/torcida` - Para inicar simulador de conversa de torcida
 - `/lineup` — Mostra os jogadores e comissão técnica da equipe  
 - `/titulos` — Lista os títulos conquistados pela FURIA no CS2  
 - `/ativarnotificacao` — Ativa notificações automáticas sobre novos jogos  
 - `/desativarnotificacao` — Cancela as notificações de novos jogos  
+
 
 ---
 
@@ -60,13 +63,16 @@ python -m bot.main
 ```
 FURIA-Bot/
 ├── bot/
+    ├── cache 
 │   ├── core             # Importa configurações para funcionar framework
 │   ├── handlers/        # Comandos do bot (/start, /loja, etc.)
 │   ├── services/        # Funções auxiliares (pandascore, notificações)
 │   ├── main.py          # Código principal do bot
 │   └── __init__.py
 ├── requirements.txt     # Dependências
-└── README.md            # Documentação
+├── README.md            # Documentação
+├── chat_notificacao     # Armazena chats que serão notificados
+└── .env                 # Cadastro chaves de API
 ```
 
 ---
@@ -85,10 +91,13 @@ FURIA-Bot/
 
 ## 📌 Próximos Passos
 
+- [ ] Criar um batepapo funcional que usa IA para responder o usuário
+- [ ] Adicionar stats de players ao pagar por funcionalidade no PandaScore  
 - [ ] Adicionar histórico de mensagens no modo bate-papo  
 - [ ] Criar painel administrativo web para gerenciar notificações  
 - [ ] Expandir para outras modalidades (Valorant, R6, Rocket League)  
 - [ ] Suporte a múltiplos idiomas  
+
 
 ---
 
