@@ -18,7 +18,7 @@ def register(bot):
         ]
 
         gritos_explosivos = [
-            f"{random.choice(emojis)}{" FURIA!".join([''] * random.randint(4, 7))}",
+            f"{random.choice(emojis)}{' FURIA!'.join([''] * random.randint(4, 7))}",
             f"{random.choice(emojis)} FURIAAAAAAAAAAAAAAAAAA!!! {random.choice(emojis)}",
             f"{random.choice(jogadores).upper()} INSANO! QUE BALAAAAAAAA! 💥💥💥",
             f"{user_first_name.upper()} TÁ MALUCO COM ESSA FURIA! 🐆🔥",
